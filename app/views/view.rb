@@ -1,4 +1,5 @@
 class View
+
   def display_one
     p "*" * 70
     p modified
@@ -7,7 +8,7 @@ class View
 
   def newline
     puts
-  end ,
+  end 
 
   def ask_for_word
     puts "Please enter a word:"
@@ -16,6 +17,5 @@ class View
   def ask_for_another_word
     puts "Please enter another word:"
   end
+
 end
-
-

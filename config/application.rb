@@ -18,6 +18,14 @@ end
 #
 # See http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
 
+Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each do |controller_file|
+  require controller_file
+end
+
+Dir[APP_ROOT.join('app', 'views', '*.rb')].each do |view_file|
+  require view_file
+end
+
 Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
   filename = File.basename(model_file).gsub('.rb', '')
   autoload ActiveSupport::Inflector.camelize(filename), model_file

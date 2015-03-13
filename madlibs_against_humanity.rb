@@ -5,5 +5,9 @@ require_relative 'config/application'
 
 deck = Deck.first
 
-p deck.retrieve
+deck.retrieve
 
+deck.count_blanks
+
+
+p deck.complete(sentence: Sentence.find(16), first_word: "ballsack")

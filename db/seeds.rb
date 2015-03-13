@@ -7,4 +7,4 @@ file.each do |line|
   madlibs_against_humanity.sentences << Sentence.create(original: stripped_line, modified: false)
 end
 
-madlibs_against_humanity.
+madlibs_against_humanity.count_blanks

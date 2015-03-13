@@ -20,11 +20,16 @@ class Deck < ActiveRecord::Base
     when 0
       p "We should probably destroy sentence #{sentence}"
     when 1
-      sentence.original.sub("_", first_word)
+      puts sentence.original.sub("_", first_word)
     when 2
-      sentence.original.sub("_", second_word)
+      replaced = sentence.original.sub("_", first_word)
+      modified = replaced.sub("_", second_word)
+      puts modified
     when 3
-      sentence.original.sub("_", third_word)
+      replaced = sentence.original.sub("_", first_word)
+      replaced_again = replaced.sub("_", second_word)
+      modified = replaced_again.sub("_", third_word)
+      puts modified
     end
   end
 

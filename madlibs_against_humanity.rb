@@ -5,9 +5,17 @@ require_relative 'config/application'
 
 deck = Deck.first
 
-deck.retrieve
+# deck.retrieve
 
-deck.count_blanks
+# deck.count_blanks
 
 
-p deck.complete(sentence: Sentence.find(16), first_word: "ballsack")
+# p deck.complete(sentence: Sentence.find(16), first_word: "ballsack")
+
+controller = Controller.new(
+  model: Sentence,
+  collection: Deck,
+  view: View
+)
+
+controller.play

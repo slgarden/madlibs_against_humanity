@@ -6,9 +6,9 @@ class View
     p "*" * 70
   end
 
-  def newline
+  def line_break
     puts
-  end 
+  end
 
   def ask_for_word
     puts "Please enter a word:"

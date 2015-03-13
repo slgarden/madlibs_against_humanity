@@ -16,7 +16,7 @@ class Controller
         first_word = gets.chomp
         break if first_word == "exit"
         @collection.complete(sentence: sentence, first_word: first_word)
-        @view.newline
+        @view.line_break
       when 2
         @view.ask_for_word
         first_word = gets.chomp
@@ -25,7 +25,7 @@ class Controller
         second_word = gets.chomp
         break if second_word == "exit"
         @collection.complete(sentence: sentence, first_word: first_word, second_word: second_word)
-        @view.newline
+        @view.line_break
       when 3
         @view.ask_for_word
         first_word = gets.chomp
@@ -37,7 +37,7 @@ class Controller
         third_word = gets.chomp
         break if third_word == "exit"
         @collection.complete(sentence: sentence, first_word: first_word, second_word: second_word, third_word: third_word)
-        @view.newline
+        @view.line_break
       end
     end
   end

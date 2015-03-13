@@ -7,6 +7,14 @@ class View
 
   def newline
     puts
+  end ,
+
+  def ask_for_word
+    puts "Please enter a word:"
+  end
+
+  def ask_for_another_word
+    puts "Please enter another word:"
   end
 end
 

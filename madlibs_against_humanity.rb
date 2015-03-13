@@ -13,7 +13,6 @@ deck = Deck.first
 # p deck.complete(sentence: Sentence.find(16), first_word: "ballsack")
 
 controller = Controller.new(
-  model: Sentence,
   collection: Deck,
   view: View
 )

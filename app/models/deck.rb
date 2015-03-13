@@ -38,7 +38,10 @@ class Deck < ActiveRecord::Base
       sentence.blank_count = sentence.original.count('_')
       sentence.save
     end
-    # need to delete sentences where blank_count is 0
+  end
+
+  def add_blanks
+    # add "_" to sentences with blank_count of 0
   end
 
 end
